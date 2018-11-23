@@ -1,6 +1,18 @@
 .feedback
   padding: 94px 0
-  background: url('../img/feedback/feedback-bg.jpg') no-repeat center right -30%
+  background: url('../img/feedback/feedback-bg.jpg') no-repeat center left 700px
+  background-size: contain
+  position: relative
+  z-index: 1
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 60%
+    height: 100%
+    background-color: #fff
+    z-index: -1
 .form
   max-width: 575px
   form

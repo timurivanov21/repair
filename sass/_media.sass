@@ -1,0 +1,50 @@
+@media (max-width: 1199px)
+  .container
+    width: 970px
+@media (max-width: 992px)
+  .container
+    width: 767px
+  .main
+    &-text
+      &__title
+        font-size: 30px
+        line-height: 36px
+  .feedback
+    background-color: #fff
+@media (max-width: 768px)
+  .container
+    width: 95%
+  .hidden-xs
+    display: none
+  .main
+    &-wrap
+      flex-direction: column
+    &-text
+      max-width: 400px
+      margin: auto
+      &__title
+        text-align: center
+@media (max-width: 576px)
+  .header
+    position: relative
+    &-logo
+      max-width: 130px
+    &-text
+      &__button
+        position: absolute
+        right: 8%
+        bottom: -35px
+      &__phone
+        font-size: 16px
+  .form
+    &__title, &__subtitle
+      text-align: center
+    &__input
+      width: 100%
+    &-info
+      &__comment
+        max-width: 40%
+      &__tel
+        width: 50%
+        &::before
+          display: none
