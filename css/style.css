@@ -679,6 +679,9 @@ img {
 }
 
 @media (max-width: 576px) {
+  body {
+    padding-right: 0;
+  }
   .header {
     position: relative;
   }
@@ -698,6 +701,10 @@ img {
   }
   .form__input {
     width: 100%;
+  }
+  .form-info {
+    font-size: 13px;
+    letter-spacing: -0.7px;
   }
   .form-info__comment {
     max-width: 40%;
