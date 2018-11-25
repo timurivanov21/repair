@@ -1,3 +1,6 @@
+@media (max-width: 3000px)
+  .phone-hidden
+    display: none
 @media (max-width: 1199px)
   .container
     width: 970px
@@ -26,18 +29,18 @@
         text-align: center
 @media (max-width: 576px)
   body
-    padding-right: 0
+    overflow-x: hidden
   .header
-    position: relative
     &-logo
       max-width: 130px
     &-text
       &__button
-        position: absolute
-        right: 8%
-        bottom: -35px
+        display: none
       &__phone
-        font-size: 16px
+        font-size: 13px
+  .phone-hidden
+    display: block
+    margin-left: -10px
   .form
     &__title, &__subtitle
       text-align: center
@@ -48,7 +51,12 @@
       letter-spacing: -0.7px
       &__comment
         max-width: 40%
+        line-height: 1.3
       &__tel
         width: 50%
         &::before
           display: none
+      &__text
+        line-height: 1.3
+      &__phone
+        line-height: 1.3
