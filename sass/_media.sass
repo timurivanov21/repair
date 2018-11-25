@@ -28,8 +28,6 @@
       &__title
         text-align: center
 @media (max-width: 576px)
-  body
-    overflow-x: hidden
   .header
     &-logo
       max-width: 130px
@@ -46,6 +44,8 @@
       text-align: center
     &__input
       width: 100%
+      &:first-child
+        margin-right: 0
     &-info
       font-size: 13px
       letter-spacing: -0.7px
