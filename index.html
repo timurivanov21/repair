@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ремонт квартир</title>
+  <link rel="stylesheet" href="css/arcticmodal/jquery.arcticmodal-0.3.css">
+  <link rel="stylesheet" href="css/arcticmodal/simple.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,10 +21,10 @@
           <a class="header-text__phone" href="tel:+74954225131">+7 (495) 42-251-31</a>
         </div>
         <div class="header-text__button">
-          <button class="button" id="button-callback">Перезвоните <span class="hidden-xs">мне</span></button>
+          <button class="button" id="button-callback" onclick="$('#modal').arcticmodal()">Перезвоните <span class="hidden-xs">мне</span></button>
         </div>
         <div class="phone-hidden">
-          <a href="#" id="phone-callback"><img src="img/phone.png" alt=""></a>
+          <a href="#" id="phone-callback" onclick="$('#modal').arcticmodal()"><img src="img/phone.png" alt=""></a>
         </div>
       </div>
     </div>
@@ -80,89 +82,88 @@
       </div>
     </div>
   </section>
+  
+  <div class="g-hidden" style="display: none;">
+    <div class="box-modal" id="modal">
+      <div class="box-modal_close arcticmodal-close">&#10006;</div>
 
-  <div class="modal modal_hidden" id="modal-callback">
-    <div class="modal__dialog">
-      <div class="modal__close">&#10006;</div>
-      <div class="modal__info">
+      <div class="modal__dialog" id="modal">
+        <div class="modal__info">
 
-        <div class="modal__info-block">
-          <div class="modal__info-block__img">
-            <img src="img/modal/img1.jpg" alt="Комната 1">
+          <div class="modal__info-block">
+            <div class="modal__info-block__img">
+              <img src="img/modal/img1.jpg" alt="Комната 1">
+            </div>
+            <div class="modal__info-block__descr">
+              <span class="modal__info-block__descr-title">Ванная комната</span>
+              <p class="modal__info-block__descr-price">
+                135*150 - <span class="modal__info-block__descr-price_bold">31 000 руб.</span><br>
+                170*170 - <span class="modal__info-block__descr-price_bold">43 000 руб.</span>
+              </p>
+            </div>
           </div>
-          <div class="modal__info-block__descr">
-            <span class="modal__info-block__descr-title">Ванная комната</span>
-            <p class="modal__info-block__descr-price">
-              135*150 - <span class="modal__info-block__descr-price_bold">31 000 руб.</span><br>
-              170*170 - <span class="modal__info-block__descr-price_bold">43 000 руб.</span>
-            </p>
+          <div class="modal__info-block">
+            <div class="modal__info-block__img">
+              <img src="img/modal/img2.jpg" alt="Комната 2">
+            </div>
+            <div class="modal__info-block__descr">
+              <span class="modal__info-block__descr-title">Туалет</span>
+              <p class="modal__info-block__descr-price">
+                135*70 - <span class="modal__info-block__descr-price_bold">14 000 руб.</span>
+              </p>
+            </div>
+          </div>
+          <div class="modal__info-block">
+            <div class="modal__info-block__img">
+              <img src="img/modal/img3.jpg" alt="Комната 3">
+            </div>
+            <div class="modal__info-block__descr">
+              <span class="modal__info-block__descr-title">Совмещенный санузел</span>
+              <p class="modal__info-block__descr-price">
+                170*210 - <span class="modal__info-block__descr-price_bold">54 000 руб.</span>
+              </p>
+            </div>
+          </div>
+          <div class="modal__info-works">
+            <h3 class="modal__info-works__title">В стоимость работ входит</h3>
+            <ul class="modal__info-works__list">
+              <li class="modal__info-works__list-item">Демонтаж старого покрытия стен и пола</li>
+              <li class="modal__info-works__list-item">Выравнивание стен гипсовыми составами</li>
+              <li class="modal__info-works__list-item">Грунтовка стен и пола<span class="hidden-text"> антисептиком, бетоноконтактом</span></li>
+              <li class="modal__info-works__list-item">Монтаж кафельной плитки на полу и стенах</li>
+              <li class="modal__info-works__list-item">Установка реечного или натяжного потолка<span class="hidden-text">, светильников</span></li>
+              <li class="modal__info-works__list-item">Монтаж двери с коробкой</li>
+            </ul>
           </div>
         </div>
-        <div class="modal__info-block">
-          <div class="modal__info-block__img">
-            <img src="img/modal/img2.jpg" alt="Комната 2">
-          </div>
-          <div class="modal__info-block__descr">
-            <span class="modal__info-block__descr-title">Туалет</span>
-            <p class="modal__info-block__descr-price">
-              135*70 - <span class="modal__info-block__descr-price_bold">14 000 руб.</span>
-            </p>
-          </div>
+
+        <div class="modal__form">
+          <h1 class="modal__form-title">
+              Узнайте точную стоимость<br>
+              ремонта по телефону!
+          </h1>
+          <span class="modal__form-subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
+          <form action="#">
+            <input type="text" class="input modal__form-input" placeholder="Ваше имя">
+            <input type="text" class="input modal__form-input" placeholder="Ваш телефон">
+            <button type="submit" class="button modal__form-button">Узнать стоимость</button>
+          </form>
+          <span class="modal__form-descr">
+              Или Вы можете перезвонить нам сами<span class="br"></span>
+              по телефону:            
+          </span>
+          <span class="modal__form-phone">+7 (8182) 42-51-31</span>
         </div>
-        <div class="modal__info-block">
-          <div class="modal__info-block__img">
-            <img src="img/modal/img3.jpg" alt="Комната 3">
-          </div>
-          <div class="modal__info-block__descr">
-            <span class="modal__info-block__descr-title">Совмещенный санузел</span>
-            <p class="modal__info-block__descr-price">
-              170*210 - <span class="modal__info-block__descr-price_bold">54 000 руб.</span>
-            </p>
-          </div>
-        </div>
-        <div class="modal__info-works">
-          <h3 class="modal__info-works__title">В стоимость работ входит</h3>
-          <ul class="modal__info-works__list">
-            <li class="modal__info-works__list-item">Демонтаж старого покрытия стен и пола</li>
-            <li class="modal__info-works__list-item">Выравнивание стен гипсовыми составами</li>
-            <li class="modal__info-works__list-item">Грунтовка стен и пола<span class="hidden-text"> антисептиком, бетоноконтактом</span></li>
-            <li class="modal__info-works__list-item">Монтаж кафельной плитки на полу и стенах</li>
-            <li class="modal__info-works__list-item">Установка реечного или натяжного потолка<span class="hidden-text">, светильников</span></li>
-            <li class="modal__info-works__list-item">Монтаж двери с коробкой</li>
-          </ul>
-        </div>
+
       </div>
-
-      <div class="modal__form">
-        <h1 class="modal__form-title">
-            Узнайте точную стоимость<br>
-            ремонта по телефону!
-        </h1>
-        <span class="modal__form-subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
-        <form action="#">
-          <input type="text" class="input modal__form-input" placeholder="Ваше имя">
-          <input type="text" class="input modal__form-input" placeholder="Ваш телефон">
-          <button type="submit" class="button modal__form-button">Узнать стоимость</button>
-        </form>
-        <span class="modal__form-descr">
-            Или Вы можете перезвонить нам сами<span class="br"></span>
-            по телефону:            
-        </span>
-        <span class="modal__form-phone">+7 (8182) 42-51-31</span>
-      </div>
-
     </div>
   </div>
 
+  <script src="//yandex.st/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
   <script>
-    document.querySelector('#button-callback').addEventListener('click', function() {
-      document.querySelector('#modal-callback').classList.toggle('modal_visible');
-    });
-    document.querySelector('#phone-callback').addEventListener('click', function() {
-      document.querySelector('#modal-callback').classList.toggle('modal_visible');
-    });
-    document.querySelector('.modal__close').addEventListener('click', function() {
-      document.querySelector('#modal-callback').classList.toggle('modal_visible');
+    $(document).ready(function(){
+      $('#modal').arcticmodal();
     });
   </script>
 </body>
