@@ -4,6 +4,13 @@
 @media (max-width: 1199px)
   .container
     width: 970px
+  .modal
+    &__dialog
+      width: 970px
+    &__info
+      padding:
+        right: 20px
+        left: 50px
 @media (max-width: 992px)
   .container
     width: 767px
@@ -14,6 +21,21 @@
         line-height: 36px
   .feedback
     background-color: #fff
+  .modal
+    &__dialog
+      width: 767px
+    &__info
+      padding: 30px
+      &-works
+        &__title
+          margin: 20px 0 15px
+    &__form
+      padding: 30px
+      &-subtitle
+        margin: 10px 0 20px
+        line-height: 25px
+  .hidden-text
+    display: none
 @media (max-width: 768px)
   .container
     width: 95%
@@ -27,6 +49,15 @@
       margin: auto
       &__title
         text-align: center
+  .modal
+    &__dialog
+      flex-direction: column
+    &__info
+      flex-basis: 100%
+      order: 1
+    &__form
+      flex-basis: 100%
+      height: 100vh
 @media (max-width: 576px)
   .header
     &-logo
@@ -60,3 +91,15 @@
         line-height: 1.3
       &__phone
         line-height: 1.3
+@media (max-width: 320px)
+  .modal
+    &__form
+      &-title
+        font-size: 18px
+        line-height: 20px
+      &-button
+        margin-top: 0px
+      &-descr
+        margin-top: 15px
+      .br
+        display: none
