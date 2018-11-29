@@ -162,8 +162,10 @@
   <script src="//yandex.st/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $('#modal').arcticmodal();
+    $(document).ready(function() {
+      $('#button-callback').on('click', function() {
+        $('#modal').arcticmodal();
+      });
     });
   </script>
 </body>
