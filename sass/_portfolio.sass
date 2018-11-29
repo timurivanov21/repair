@@ -1,0 +1,67 @@
+.portfolio
+  padding: 100px 0
+  background: $light-bg-color url('../img/portfolio/portfolio-bg.png') no-repeat center center
+  background-size: cover
+  position: relative
+  z-index: 1
+  &::before
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    width: 40%
+    height: 100%
+    background-color: #fff
+    z-index: -1
+.slider
+  margin-top: 80px
+  &__item
+    text-align: center
+    &:focus
+      outline: none
+    img
+      margin: auto
+.arrow
+  width: 45px
+  height: 19px
+  position: absolute
+  bottom: -68px
+  &:hover
+    cursor: pointer
+  &_right
+    left: 50%
+    background: url('../img/right-arrow.png') no-repeat center
+    background-size: 100%
+    transform: translateX(15px)
+  &_left
+    margin-left: -15px
+    left: 50%
+    transform: translateX(-45px)
+    background: url('../img/left-arrow.png') no-repeat center
+    background-size: 100%
+.owl-carousel
+  margin-top: 50px
+  position: relative
+.owl-carousel .owl-nav button.owl-next
+  width: 45px
+  height: 19px
+  position: absolute
+  bottom: -68px
+  left: 50%
+  background: url('../img/right-arrow.png') no-repeat center
+  background-size: 100%
+  transform: translateX(15px)
+  &:focus
+    outline: none
+.owl-carousel .owl-nav button.owl-prev
+  width: 45px
+  height: 19px
+  position: absolute
+  bottom: -68px
+  margin-left: -15px
+  left: 50%
+  transform: translateX(-45px)
+  background: url('../img/left-arrow.png') no-repeat center
+  background-size: 100%
+  &:focus
+    outline: none

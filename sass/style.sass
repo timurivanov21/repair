@@ -7,6 +7,7 @@
 @import 'header'
 @import 'main'
 @import 'feedback'
+@import 'portfolio'
 
 @import 'modal'
 
@@ -20,14 +21,13 @@ body
   margin: 0 auto
 img 
   max-width: 100%
+.section
+ &-title
+   +bold
+   line-height: 45px
+   &_center
+     text-align: center
 
-.white-popup 
-  position: relative
-  background: #FFF
-  padding: 20px
-  width: auto
-  max-width: 500px
-  margin: 20px auto
 
 @import 'media'
 
