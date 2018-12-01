@@ -39,7 +39,7 @@ $(document).ready(function() {
         phoneVal = $('[name = user_phone]').val();
 
     $.ajax({
-      url: 'mailer/smart.php',
+      url: '../mailer/smart.php',
       data: {name:nameVal, phone:phoneVal},
       success: function() {
         // $('.class').fadeIn();
