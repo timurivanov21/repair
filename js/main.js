@@ -39,6 +39,7 @@ $(document).ready(function() {
         phoneVal = $('[name = user_phone]').val();
 
     $.ajax({
+      type: 'POST',
       url: 'mailer/smart.php',
       data: {name:nameVal, phone:phoneVal},
       success: function() {
