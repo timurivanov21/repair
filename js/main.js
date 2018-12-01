@@ -43,8 +43,8 @@ $(document).ready(function() {
       data: {name:nameVal, phone:phoneVal},
       success: function() {
         // $('.class').fadeIn();
-        $(this).find('input').val('');
         alert('Сообщение успешно отправлено');
+        $(this).find('input').val('');
         $('.js-ajax').trigger('reset');
       }
     });
