@@ -207,8 +207,8 @@
           </h1>
           <span class="modal__form-subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
           <form action="#" method="POST" class="js-ajax">
-            <input type="text" class="input modal__form-input" name="user_name" placeholder="Ваше имя">
-            <input type="text" class="input modal__form-input" name="user_phone" placeholder="Ваш телефон">
+            <input type="text" class="input modal__form-input" name="user_name" placeholder="Ваше имя" required>
+            <input type="text" class="input modal__form-input" name="user_phone" pattern="^\+\d{1}-\d{3}-\d{3}-\d{2}-\d{2}$" placeholder="Ваш телефон" required>
             <button type="submit" class="button modal__form-button">Узнать стоимость</button>
           </form>
           <span class="modal__form-descr">
