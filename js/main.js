@@ -34,21 +34,21 @@ $(document).ready(function() {
     ]
   });
 
-  $('form').on('submit', function() {
-    var nameVal = $('[name = user_name]').val(),
-        phoneVal = $('[name = user_phone]').val();
+  // $('form').on('submit', function() {
+  //   var nameVal = $('[name = user_name]').val(),
+  //       phoneVal = $('[name = user_phone]').val();
 
-    $.ajax({
-      url: 'mailer/smart.php',
-      data: {name:nameVal, phone:phoneVal},
-      success: function() {
-        // $('.class').fadeIn();
-        alert('Сообщение успешно отправлено');
-        $(this).find('input').val('');
-        $('form').trigger('reset');
-      }
-    });
-    return false;
-  });
+  //   $.ajax({
+  //     url: 'mailer/smart.php',
+  //     data: {name:nameVal, phone:phoneVal},
+  //     success: function() {
+  //       // $('.class').fadeIn();
+  //       alert('Сообщение успешно отправлено');
+  //       $(this).find('input').val('');
+  //       $('form').trigger('reset');
+  //     }
+  //   });
+  //   return false;
+  // });
 
 });
