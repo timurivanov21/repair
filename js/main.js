@@ -43,10 +43,9 @@ $(document).ready(function() {
       data: {name:nameVal, phone:phoneVal},
       success: function() {
         // $('.class').fadeIn();
-        alert('Super');
-        // $(this).find('input').val('');
-        // alert('Сообщение успешно отправлено');
-        // $('form').trigger('reset');
+        $(this).find('input').val('');
+        alert('Сообщение успешно отправлено');
+        $('form').trigger('reset');
       }
     });
     return false;
