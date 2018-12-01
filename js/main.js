@@ -39,13 +39,13 @@ $(document).ready(function() {
         phoneVal = $('[name = user_phone]').val();
 
     $.ajax({
-      url: '../mailer/smart.php',
+      url: 'mailer/smart.php',
       data: {name:nameVal, phone:phoneVal},
       success: function() {
         // $('.class').fadeIn();
-        $(this).find('input').val('');
+        // $(this).find('input').val('');
         alert('Сообщение успешно отправлено');
-        $('form').trigger('reset');
+        // $('form').trigger('reset');
       }
     });
     return false;
