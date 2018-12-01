@@ -699,7 +699,8 @@ template {
 .information {
   background: #ffc000;
   position: relative;
-  padding-top: 96px;
+  padding-top: 98px;
+  padding-bottom: 53px;
 }
 
 .information::before {
@@ -707,7 +708,7 @@ template {
   position: absolute;
   right: 0;
   top: 0;
-  width: 50%;
+  width: 47%;
   height: 100%;
   background: #fff url("../img/information/information-bg.png") no-repeat center center;
   background-size: cover;
@@ -721,49 +722,57 @@ template {
 }
 
 .information-faq {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
   color: #000000;
-  padding: 0 10px 59px;
 }
 
 .information-faq__title {
+  font-family: "Museo Sans Bold";
+  max-width: 516px;
+  margin-top: 0;
   font-size: 22px;
   line-height: 33px;
-  font-family: 'Museo Sans Bold', sans-serif;
 }
 
 .information-faq__subtitle {
+  margin: 26px 0 83px 2px;
   font-size: 16px;
-  line-height: 45px;
 }
 
 .information-faq__questions {
-  font-family: "Museo Sans Medium";
-  font-size: 18px;
   list-style: none;
-  margin: 85px 0 0 40px;
+  margin-left: 28px;
+  max-width: 425px;
 }
 
 .information-faq__questions-item {
-  margin-bottom: 45px;
-  max-width: 380px;
-  position: relative;
+  font-family: "Museo Sans Medium";
   font-size: 18px;
-  line-height: 25px;
+  position: relative;
+  margin-bottom: 43px;
 }
 
 .information-faq__questions-item::before {
   content: '1.';
+  font-size: 14px;
+  font-family: 'Museo Sans Bold', sans-serif;
   position: absolute;
+  text-align: center;
+  left: -68px;
   top: 50%;
-  left: -80px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  padding: 5px;
   width: 35px;
   height: 35px;
-  text-align: center;
+  line-height: 35px;
   border: 2px solid #000000;
   border-radius: 50%;
 }
@@ -774,6 +783,7 @@ template {
 
 .information-faq__questions-item:nth-child(3)::before {
   content: '3.';
+  top: 10px;
 }
 
 .information-faq__questions-item:nth-child(4)::before {
@@ -781,8 +791,7 @@ template {
 }
 
 .information-feedback {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  color: #333333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -790,30 +799,45 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
   z-index: 22;
-  padding-left: 60px;
-  text-align: center;
-  color: #333333;
+  padding: 0 60px;
 }
 
-.information-feedback__br {
-  display: block;
+.information-feedback .form {
+  text-align: center;
+}
+
+.information-feedback .form__title {
+  font-family: "Museo Sans Bold";
+  margin-top: 0;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.information-feedback .form__subtitle {
+  margin-top: 45px;
+  font-size: 16px;
+}
+
+.information-feedback__input {
+  width: 92%;
+  margin-bottom: 15px;
+}
+
+.information-feedback__button {
+  font-family: "Museo Sans Bold";
+  color: #333333;
+  width: 92%;
+  margin: 15px 0 33px;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 26px;
 }
 
 .information-feedback__comment {
   font-size: 15px;
-  line-height: 24px;
-}
-
-.information .feedback__input {
-  width: 70%;
-  margin-bottom: 15px;
-}
-
-.information .feedback__button {
-  width: 70%;
-  margin: 15px 0 30px;
-  padding: 25px;
 }
 
 .modal {
@@ -1017,6 +1041,7 @@ template {
 body {
   font-family: 'Museo Sans Light', sans-serif;
   color: #333333;
+  overflow-x: hidden;
 }
 
 .container {
@@ -1074,33 +1099,11 @@ img {
   .feedback {
     background-color: #fff;
   }
-  .information {
-    padding-left: -100px;
+  .information-faq__subtitle {
+    margin-bottom: 63px;
   }
-  .information-faq {
-    padding-right: 30px;
-  }
-  .information-faq__title {
-    text-align: left;
-  }
-  .information-faq__questions {
-    text-align: left;
-    margin-top: 40px;
-    margin-left: -20px;
-    list-style: circle;
-  }
-  .information-faq__questions-item {
-    width: auto;
-    text-align: left;
-  }
-  .information-faq__questions-item::before {
-    display: none;
-  }
-  .information .feedback__input {
-    width: 100%;
-  }
-  .information .feedback__button {
-    width: 100%;
+  .information-feedback {
+    padding: 0 30px;
   }
   .modal__dialog {
     width: 767px;
@@ -1237,43 +1240,19 @@ img {
   .slider {
     margin-top: 40px;
   }
-  .information::before {
-    display: none;
-  }
   .information-wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   .information-faq {
-    padding: 0;
+    text-align: center;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  .information-faq__questions {
-    list-style: none;
-  }
-  .information-faq__questions-item {
-    text-align: center;
-    margin: 0 auto 25px;
+    z-index: 30;
   }
   .information-feedback {
-    padding-left: 0;
-    text-align: center;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    padding-bottom: 40px;
-  }
-  .information .feedback__input {
-    width: 80%;
-  }
-  .information .feedback__button {
-    background-color: #ffe04d;
-    width: 80%;
-  }
-  .information .feedback__button:hover {
-    background-color: #ffe466;
   }
   .modal__dialog {
     width: 100%;
@@ -1297,12 +1276,20 @@ img {
   }
 }
 
-@media (max-width: 576px) {
-  .information .feedback__input {
-    width: 100%;
+@media (max-width: 320px) {
+  .information-faq {
+    text-align: center;
+    padding-right: 0;
   }
-  .information .feedback__button {
-    width: 100%;
+  .information-faq__questions {
+    padding-left: 0;
+  }
+  .information-faq__questions-item::before {
+    display: none;
+  }
+  .information-feedback {
+    text-align: center;
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -10,7 +10,7 @@ $mail->CharSet = 'utf-8';
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'abdul.xamitov@mail.ru';                 // Наш логин
 $mail->Password = 'Us02L&nso!';                           // Наш пароль от ящика

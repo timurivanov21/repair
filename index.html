@@ -134,20 +134,22 @@
           </ul>
         </div>
 
-      <div class="information-feedback"> 
-        <div class="form">
-          <h2 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h2>
-          <span class="form__subtitle">Для этого заполните форму ниже</span>
-          <form action="#">
-            <input type="text" class="input input-name feedback__input" name="user_name" placeholder="Ваше имя" required>
-            <input type="tel" pattern="^\+\d{1}-\d{3}-\d{3}-\d{2}-\d{2}$" name="user_phone" class="input input-tel feedback__input" placeholder="Ваш телефон: +7-xxx-xxx-xx-xx" required>
-            <button type="submit" class="button feedback__button">Рассчитать стоимость</button> 
-          </form>
-          <span class="information-feedback__comment">Мы перезвоним Вам в течение 60 секунд</span>
+        <div class="information-feedback"> 
+          <div class="form">
+            <h2 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h2>
+            <span class="form__subtitle">Для этого заполните форму ниже</span>
+            <form action="#">
+              <input type="text" class="input input-name information-feedback__input" name="user_name" placeholder="Ваше имя" required>
+              <input type="tel" pattern="^\+\d{1}-\d{3}-\d{3}-\d{2}-\d{2}$" name="user_phone" class="input input-tel information-feedback__input" placeholder="Ваш телефон: +7-xxx-xxx-xx-xx" required>
+              <button type="submit" class="button information-feedback__button">Рассчитать стоимость</button> 
+            </form>
+            <span class="information-feedback__comment">Мы перезвоним Вам в течение 60 секунд</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
   <!-- Модальное окно  -->
   <div class="g-hidden" style="display: none;">
     <div class="box-modal" id="modal">
