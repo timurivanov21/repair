@@ -34,7 +34,7 @@ $(document).ready(function() {
     ]
   });
 
-  $('.js-ajax').on('submit', function() {
+  $('form').on('submit', function() {
     var nameVal = $('[name = user_name]').val(),
         phoneVal = $('[name = user_phone]').val();
 
@@ -45,7 +45,7 @@ $(document).ready(function() {
         // $('.class').fadeIn();
         alert('Сообщение успешно отправлено');
         $(this).find('input').val('');
-        $('.js-ajax').trigger('reset');
+        $('form').trigger('reset');
       }
     });
     return false;
