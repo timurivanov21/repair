@@ -7,7 +7,6 @@
   <title>Ремонт квартир</title>
   <link rel="stylesheet" href="css/arcticmodal/jquery.arcticmodal-0.3.css">
   <link rel="stylesheet" href="css/arcticmodal/simple.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -47,7 +46,7 @@
             </div>
             <div class="main-advantages__item">
               <div class="main-advantages__img main-advantages__img-2"></div>
-              <div class="main-advantages__text">Рассчитаем смету на работы и материалы в день обращения</div>
+              <div class="main-advantages__text">Рассчитаем смету на работы и&nbsp;материалы в день обращения</div>
             </div>
             <div class="main-advantages__item">
               <div class="main-advantages__img main-advantages__img-3"></div>
@@ -68,8 +67,8 @@
         <h2 class="form__title">Мы бесплатно разработаем дизайн-проект Вашего жилья и реализуем его!</h2>
         <span class="form__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
         <form action="#">
-          <input type="text" class="input input-name form__input" placeholder="Ваше имя">
-          <input type="tel" pattern="^\+\d{1}-\d{3}-\d{3}-\d{2}-\d{2}$" class="input input-tel form__input" placeholder="Ваш телефон: +7-xxx-xxx-xx-xx" required>
+          <input type="text" class="input input-name form__input" name="user_name" placeholder="Ваше имя" required>
+          <input type="tel" pattern="^\+\d{1}-\d{3}-\d{3}-\d{2}-\d{2}$" name="user_phone" class="input input-tel form__input" placeholder="Ваш телефон: +7-xxx-xxx-xx-xx" required>
           <button type="submit" class="button form__button">Получить <span class="hidden-xs">бесплатный</span> дизайн-проект</button> 
         </form>
         <div class="form-info">
@@ -85,6 +84,7 @@
     </div>
   </section>
 
+  <!-- Слайдер  -->
   <section class="portfolio">
     <div class="container">
       <h2 class="section-title section-title_center">
@@ -114,35 +114,41 @@
     </div>
   </section>
 
-  <section class="portfolio">
+  <!-- Секция с информацией  -->
+  <section class="information">
     <div class="container">
-      <h2 class="section-title section-title_center">
-        Работая с 2007 года,<br>
-        мы сделали более 500 ремонтов в квартирах и домах
-      </h2>
-      <div class="owl-carousel">
-        <div class="carousel__item">
-          <img src="img/portfolio/slider-image1.jpg" alt="">
+      <div class="information-wrap">
+        <div class="information-faq">
+          <h2 class="information-faq__title">
+            Мы можем озвучить Вам примерную стоимость
+            работы и материалов по телефону
+          </h2>
+          <span class="information-faq__subtitle">
+            Для этого нужно ответить на 4 вопроса:
+          </span>
+          <ul class="information-faq__questions">
+            <li class="information-faq__questions-item">Какова площадь помещения?</li>
+            <li class="information-faq__questions-item">У Вас новостройка или вторичное жилье?</li>
+            <li class="information-faq__questions-item">Где находится помещение, в котором будет производиться ремонт?</li>
+            <li class="information-faq__questions-item">Назначение помещения?</li>
+          </ul>
         </div>
-        <div class="carousel__item">
-          <img src="img/portfolio/slider-image2.jpg" alt="">
-        </div>
-        <div class="carousel__item">
-          <img src="img/portfolio/slider-image3.jpg" alt="">
-        </div>
-        <div class="carousel__item">
-          <img src="img/portfolio/slider-image1.jpg" alt="">
-        </div>
-        <div class="carousel__item">
-          <img src="img/portfolio/slider-image2.jpg" alt="">
-        </div>
-        <div class="carousel__item">
-          <img src="img/portfolio/slider-image3.jpg" alt="">
+
+      <div class="information-feedback"> 
+        <div class="form">
+          <h2 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h2>
+          <span class="form__subtitle">Для этого заполните форму ниже</span>
+          <form action="#">
+            <input type="text" class="input input-name feedback__input" name="user_name" placeholder="Ваше имя" required>
+            <input type="tel" pattern="^\+\d{1}-\d{3}-\d{3}-\d{2}-\d{2}$" name="user_phone" class="input input-tel feedback__input" placeholder="Ваш телефон: +7-xxx-xxx-xx-xx" required>
+            <button type="submit" class="button feedback__button">Рассчитать стоимость</button> 
+          </form>
+          <span class="information-feedback__comment">Мы перезвоним Вам в течение 60 секунд</span>
         </div>
       </div>
     </div>
   </section>
-
+  <!-- Модальное окно  -->
   <div class="g-hidden" style="display: none;">
     <div class="box-modal" id="modal">
       <div class="box-modal_close arcticmodal-close">&#10006;</div>
@@ -201,8 +207,8 @@
           </h1>
           <span class="modal__form-subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
           <form action="#">
-            <input type="text" class="input modal__form-input" placeholder="Ваше имя">
-            <input type="text" class="input modal__form-input" placeholder="Ваш телефон">
+            <input type="text" class="input modal__form-input" name="user_name" placeholder="Ваше имя">
+            <input type="text" class="input modal__form-input" name="user_phone" placeholder="Ваш телефон">
             <button type="submit" class="button modal__form-button">Узнать стоимость</button>
           </form>
           <span class="modal__form-descr">
@@ -217,67 +223,7 @@
 
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="js/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
   <script src="js/slick.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('#button-callback').on('click', function() {
-        $('#modal').arcticmodal();
-      });
-    });
-
-    $(document).ready(function(){
-      $('.slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        nextArrow: '<div class="arrow arrow_right"></div>',
-        prevArrow: '<div class="arrow arrow_left"></div>',
-        responsive: [
-          {
-            breakpoint: 1200,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-            }
-          },
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-    });
-
-    $(document).ready(function() {
-      $(".owl-carousel").owlCarousel({
-          loop: true,
-          margin: 10,
-          nav: true,
-          navText: ['<i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>',
-              '<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>'],
-          responsive: {
-              0: {
-                  items: 1
-              },
-              600: {
-                  items: 2
-              },
-              1000: {
-                  items: 3
-              }
-          }
-      })
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

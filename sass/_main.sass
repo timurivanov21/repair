@@ -1,6 +1,7 @@
 .main
   background-color: $light-bg-color
   padding: 60px 0
+  color: $text-color
   &-wrap
     display: flex
   &-text
@@ -13,18 +14,21 @@
       margin-bottom: 50px
       span
         display: block
-        margin-top: 20px
+        margin: 22px 0 0 3px
         font-size: 20px
   &-image
     flex-basis: 50%
   &-advantages
     display: flex
     flex-direction: column
-    max-width: 350px
+    max-width: 330px
     &__item
       display: flex
       align-items: center
-      margin-bottom: 30px
+      margin-bottom: 24px
+    &__text
+      font-size: 14px
+      line-height: 24px
     &__img
       margin-right: 30px
       min-width: 40px
@@ -32,12 +36,13 @@
       border-radius: 50%
       border: 2px solid $primary-color
       background: 
-        size: 16px
+        size: 20px
         position: center
         repeat: no-repeat
       &-1
         background-image: url('../img/main/clock.png')
       &-2
         background-image: url('../img/main/calculator.png')
+        background-size: 16px
       &-3
         background-image: url('../img/main/paint.png')
