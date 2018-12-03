@@ -34,21 +34,47 @@ $(document).ready(function() {
     ]
   });
 
-  $('form').on('submit', function() {
-    var nameVal = $('[name = user_name]').val(),
-        phoneVal = $('[name = user_phone]').val();
+  $('#user_phone1').mask('+7 (999)-999-9999');
+  $('#user_phone2').mask('+7 (999)-999-9999');
+  $('#user_phone3').mask('+7 (999)-999-9999');
 
-    $.ajax({
-      url: 'mailer/smart.php',
-      data: {name:nameVal, phone:phoneVal},
-      success: function() {
-        // $('.class').fadeIn();
-        alert('Сообщение успешно отправлено');
-        $(this).find('input').val('');
-        $('form').trigger('reset');
-      }
-    });
-    return false;
+  $.validator.addMethod("isName", function(value, element) {
+    return this.optional(element) || value == value.match(/[A-Za-zА-Яа-яЁё]{3,}/);
   });
 
+  $("form").validate({
+    rules: {
+      user_name: {
+        required: true,
+        minlength: 2,
+        isName: true
+      },
+      user_phone: {
+        required: true
+      }
+    },
+    messages: {
+      user_name: "",
+      user_phone: ""
+    },
+    submitHandler: function() {
+      $('form').submit(function(event) {
+        event.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(this).serialize()
+        }).done(function() {
+          $('#thanks-modal').arcticmodal();
+          $(this).find("input").val("");
+          $("form").trigger("reset");
+        });
+        return false;
+      });
+    }
+  });   
+
+  $('.arcticmodal-close').on('click', function(){
+    $.arcticmodal('close');
+  });
 });

@@ -5,5 +5,14 @@
 	box-shadow: 0 0 0 6px rgba(153, 153, 153, .3);
 	border-radius: 6px;
 }
-.box-modal_close { position: absolute; right: 15px; top: 15px;z-index: 26; font-size: 16px; line-height: 15px; color: #999; cursor: pointer; }
+.box-modal_close { 
+	position: absolute;
+	right: 15px; 
+	top: 15px;
+	z-index: 26; 
+	font-size: 16px; 
+	line-height: 15px; 
+	color: #999; 
+	cursor: pointer; 
+}
 .box-modal_close:hover { color: #666; }

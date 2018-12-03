@@ -570,7 +570,7 @@ template {
 
 .form__input {
   width: 270px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .form__input:first-child {
@@ -578,6 +578,7 @@ template {
 }
 
 .form__button {
+  margin-top: 15px;
   display: block;
   padding: 26px;
   width: 100%;
@@ -1024,6 +1025,16 @@ template {
   display: block;
 }
 
+.modal__content {
+  text-align: center;
+  padding: 50px;
+}
+
+.modal__content-img {
+  width: 150px;
+  margin: 0 auto 20px;
+}
+
 .white-popup {
   position: relative;
   background: #FFF;
@@ -1061,6 +1072,10 @@ img {
 
 .section-title_center {
   text-align: center;
+}
+
+.error {
+  border-color: red;
 }
 
 @media (max-width: 3000px) {
@@ -1240,6 +1255,9 @@ img {
   .slider {
     margin-top: 40px;
   }
+  .information::before {
+    width: 50%;
+  }
   .information-wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1249,6 +1267,18 @@ img {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     z-index: 30;
+    padding-right: 0;
+  }
+  .information-faq__title {
+    max-width: none;
+  }
+  .information-faq__questions {
+    padding-left: 0;
+    max-width: none;
+    margin-left: 0;
+  }
+  .information-faq__questions-item::before {
+    display: none;
   }
   .information-feedback {
     -ms-flex-preferred-size: 100%;

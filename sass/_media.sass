@@ -130,12 +130,24 @@
   .slider
     margin-top: 40px
   .information
+    &::before
+      width: 50%
     &-wrap
       flex-wrap: wrap
     &-faq
       text-align: center
       flex-basis: 100%
       z-index: 30
+      padding-right: 0
+      &__title
+        max-width: none
+      &__questions
+        padding-left: 0
+        max-width: none
+        margin-left: 0
+        &-item
+          &::before
+            display: none
     &-feedback
       flex-basis: 100%
   .modal

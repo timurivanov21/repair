@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Шапка -->
   <header class="header">
     <div class="container header-wrap">
       <div class="header-logo">
@@ -71,7 +72,8 @@
         <!-- Форма номер 1 -->
         <form action="#">
           <input type="text" class="input input-name form__input" name="user_name" placeholder="Ваше имя" required>
-          <input type="tel" pattern="^\+\d{1}-\d{3}-\d{3}-\d{2}-\d{2}$" name="user_phone" class="input input-tel form__input" placeholder="Ваш телефон: +7-xxx-xxx-xx-xx" required>
+          <input type="tel" class="input input-tel form__input" id="user_phone1" name="user_phone" placeholder="Ваш телефон: +7 (xxx)-xxx-xx-xx" required>
+          <span id="valid"></span>
           <button type="submit" class="button form__button">Получить <span class="hidden-xs">бесплатный</span> дизайн-проект</button> 
         </form>
         <div class="form-info">
@@ -86,7 +88,7 @@
       </div>
     </div>
   </section>
-
+  <!-- pattern="^\+\d{1}-\d{3}-\d{3}-\d{2}-\d{2}$" -->
   <!-- Слайдер  -->
   <section class="portfolio">
     <div class="container">
@@ -145,8 +147,8 @@
             <!-- Форма номер 2 -->
             <form action="#">
               <input type="text" class="input input-name information-feedback__input" name="user_name" placeholder="Ваше имя" required>
-              <input type="tel" pattern="^\+\d{1}-\d{3}-\d{3}-\d{2}-\d{2}$" name="user_phone" class="input input-tel information-feedback__input" placeholder="Ваш телефон: +7-xxx-xxx-xx-xx" required>
-              <button type="submit" class="button information-feedback__button">Рассчитать стоимость</button> 
+              <input type="tel" id="user_phone2" name="user_phone" class="input input-tel information-feedback__input" placeholder="Ваш телефон: +7 (xxx)-xxx-xx-xx" required>
+              <button type="submit" class="button information-feedback__button" >Рассчитать стоимость</button> 
             </form>
             <span class="information-feedback__comment">Мы перезвоним Вам в течение 60 секунд</span>
           </div>
@@ -154,12 +156,11 @@
       </div>
     </div>
   </section>
-
   <!-- Модальное окно  -->
   <div class="g-hidden" style="display: none;">
     <div class="box-modal" id="modal">
       <div class="box-modal_close arcticmodal-close">&#10006;</div>
-        <div class="modal__dialog" id="modal">
+        <div class="modal__dialog" id="modal1">
           <div class="modal__info">
             <div class="modal__info-block">
               <div class="modal__info-block__img">
@@ -207,25 +208,40 @@
               </ul>
             </div>
           </div>
-        <div class="modal__form">
-          <h1 class="modal__form-title">
-              Узнайте точную стоимость<br>
-              ремонта по телефону!
-          </h1>
-          <span class="modal__form-subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
+          <div class="modal__form">
+            <h1 class="modal__form-title">
+                Узнайте точную стоимость<br>
+                ремонта по телефону!
+            </h1>
+            <span class="modal__form-subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
 
-          <!-- Форма номер 3 -->
-          <form action="#">
-            <input type="text" class="input modal__form-input" name="user_name" placeholder="Ваше имя" required>
-            <input type="text" class="input modal__form-input" name="user_phone" pattern="^\+\d{1}-\d{3}-\d{3}-\d{2}-\d{2}$" placeholder="Ваш телефон" required>
-            <button type="submit" class="button modal__form-button">Узнать стоимость</button>
-          </form>
-          <span class="modal__form-descr">
-              Или Вы можете перезвонить нам сами<span class="br"></span>
-              по телефону:            
-          </span>
-          <span class="modal__form-phone">+7 (8182) 42-51-31</span>
+            <!-- Форма номер 3 -->
+            <form action="#">
+              <input type="text" class="input modal__form-input" name="user_name" placeholder="Ваше имя" required>
+              <input type="text" class="input modal__form-input" name="user_phone" id="user_phone3" placeholder="Ваш телефон: +7 (xxx)-xxx-xx-xx" required>
+              <button type="submit" class="button modal__form-button">Узнать стоимость</button>
+            </form>
+            <span class="modal__form-descr">
+                Или Вы можете перезвонить нам сами<span class="br"></span>
+                по телефону:            
+            </span>
+            <span class="modal__form-phone">+7 (8182) 42-51-31</span>
+          </div>
         </div>
+    </div>
+  </div>
+  <!-- pattern="[A-Za-zА-Яа-яЁё]{3,}" -->
+
+  <!-- Модальное окно благодарности -->
+  <div class="g-hidden" style="display: none;">
+    <div class="box-modal" id="thanks-modal">
+      <div class="box-modal_close arcticmodal-close close-close">&#10006;</div>
+      <div class="modal__content" id="thanks-modal1">
+        <h1 class="modal__content-title">Сообщение успешно доставлено!</h1>
+        <div class="modal__content-img">
+          <img src="img/thumbs-up.svg" alt="Палец вверх">
+        </div>
+        <span class="modal__content-subtitle">Мы свяжемся с вами в ближайшее время</span>
       </div>
     </div>
   </div>
@@ -233,6 +249,8 @@
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="js/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
