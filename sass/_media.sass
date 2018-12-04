@@ -55,6 +55,9 @@
         margin-bottom: 63px
     &-feedback
       padding: 0 30px
+  .footer
+    &-contacts
+      padding-left: 50px
   .modal
     &__dialog
       width: 767px
@@ -132,6 +135,18 @@
     &-feedback
       flex-basis: 100%
       align-items: center
+  .footer
+    &-hidden
+      display: none
+    &-map
+      flex-basis: 50%
+      height: 540px
+    &-contacts
+      padding-top: 50px
+      padding-left: 20px
+      &__title
+        max-width: 293px
+        margin-bottom: 45px
   .modal
     &__dialog
       width: 100%
@@ -180,18 +195,59 @@
   .slider
     margin-top: 40px
   .steps
-    padding-bottom: 60px
+    padding-bottom: 20px
+    &-wrap
+      justify-content: center
+    &-item
+      flex-basis: 50%
     .section-title
       span
         display: none
   .banner
+    padding-top: 40px
+    padding-bottom: 10px
     &-title
+      font-size: 26px
       span
         display: none
   .information
-    padding-top: 60px
+    padding-top: 30px
     &::before
-      height: 51%
+      height: 58%
+    &-faq
+      &__subtitle
+        margin-top: 15px
+        margin-bottom: 20px
+      &__questions
+        &-item
+          margin-bottom: 25px
+  .footer
+    flex-wrap: wrap
+    &-map
+      order: 1
+      flex-basis: 100%
+    &-contacts
+      flex-basis: 100%
+      text-align: center
+      padding-left: 0
+      padding-bottom: 30px
+      &__title
+        margin: 0 auto
+      &__city
+        padding-left: 0
+        &-item
+          &:first-child::before
+            left: 25%
+      &__time
+        padding-left: 0
+        &-item
+          &:first-child::before
+            left: 25%
+      &__phone
+        padding-left: 0
+        &-item
+          &:first-child::before
+            left: 25%
   .modal
     &__dialog
       width: 100% 
@@ -211,6 +267,10 @@
     .br
       display: none
 @media (max-width: 320px)
+  .feedback
+    .form
+      form
+        margin-left: 0
   .price
     &-card
       min-height: auto
@@ -222,10 +282,10 @@
         margin-bottom: 10px
   .banner
     &-title
-      font-size: 26px
+      font-size: 22px
   .information
     &::before
-      height: 47%
+      height: 52%
     &-faq
       text-align: center
       padding-right: 0
@@ -237,3 +297,23 @@
     &-feedback
       text-align: center
       padding: 0
+    .form
+      form
+        margin-left: 0
+  .footer
+    &-contacts
+      &__city
+        padding-left: 0
+        &-item
+          &:first-child::before
+            left: 20%
+      &__time
+        padding-left: 0
+        &-item
+          &:first-child::before
+            left: 20%
+      &__phone
+        padding-left: 0
+        &-item
+          &:first-child::before
+            left: 20%

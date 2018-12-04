@@ -1,0 +1,74 @@
+.footer
+  display: flex
+  &-hidden
+    display: block
+  &-map
+    flex-basis: 53%
+    height: 640px
+    width: 100%
+    background: grey
+  &-contacts
+    color: $dark-color
+    padding-top: 100px
+    padding-left: 134px
+    &__title
+      +bold
+      font-size: 22px
+      line-height: 36px
+      margin-bottom: 90px
+    &__city
+      font-size: 16px
+      line-height: 26px
+      list-style: none
+      margin-bottom: 35px
+      &-item
+        position: relative
+        &:not(:first-child)
+          +bold
+        &:first-child::before
+          content: ''
+          position: absolute
+          background: url('../img/footer/footer-img1.png') no-repeat center center
+          background-size: cover
+          top: 50%
+          transform: translateY(-50%)
+          left: -35px
+          width: 14px
+          height: 20px
+    &__time
+      font-size: 16px
+      line-height: 26px
+      list-style: none
+      margin-bottom: 35px
+      &-item
+        position: relative
+        &:last-child
+          +bold
+        &:first-child::before
+          content: ''
+          position: absolute
+          background: url('../img/footer/footer-img2.png') no-repeat center center
+          background-size: cover
+          top: 50%
+          transform: translateY(-50%)
+          left: -38px
+          width: 20px
+          height: 20px
+    &__phone
+      font-size: 16px
+      line-height: 26px
+      list-style: none
+      &-item
+        position: relative
+        &:last-child
+          +bold
+        &:first-child::before
+          content: ''
+          position: absolute
+          background: url('../img/footer/footer-img3.png') no-repeat center center
+          background-size: cover
+          top: 50%
+          transform: translateY(-50%)
+          left: -38px
+          width: 20px
+          height: 20px

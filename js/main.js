@@ -132,4 +132,24 @@ $(document).ready(function() {
     }
   });
 
+  ymaps.ready(init);
+  
+  function init(){ 
+      var myMap = new ymaps.Map("map", {
+          center: [55.76, 49.106324],
+          zoom: 7
+      }); 
+
+      var myPlacemark = new ymaps.Placemark([55.798551, 49.106324], {
+        hintContent: 'Собственный значок метки',
+        balloonContent: 'Это красивая метка'
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: '../img/pin.png',
+        iconImageSize: [32, 32]
+      });
+      myMap.geoObjects.add(myPlacemark);
+  }
+
+
 });
