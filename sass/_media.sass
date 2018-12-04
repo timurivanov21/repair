@@ -28,6 +28,21 @@
         line-height: 36px
   .feedback
     background-color: #fff
+  .price
+    &-card
+      margin: 0 5px 20px
+  .steps
+    &-item
+      &:not(:last-child)::before
+        right: -24%
+      &__img
+        padding: 15px
+        width: 70px
+        height: 70px
+      &__text
+        font-size: 13px
+        min-height: 100px
+        max-width: 85%
   .information
     &-faq
       &__subtitle
@@ -72,6 +87,13 @@
     padding: 60px 0 150px
     &::before
       display: none
+  .steps
+    &-wrap
+      flex-wrap: wrap
+    &-item
+      flex-basis: 30%
+      &::before
+        display: none
   .information
     &-faq
       padding-bottom: 10px
@@ -129,9 +151,25 @@
     padding: 40px 0 150px
   .slider
     margin-top: 40px
+  .steps
+    padding-bottom: 60px
+    .section-title
+      span
+        display: none
+  .banner
+    &-title
+      span
+        display: none
   .information
+    padding-top: 60px
     &::before
-      width: 50%
+      width: 100%
+      bottom: 0
+      left: 0
+      right: auto
+      top: auto
+      z-index: 1
+      height: 55%
     &-wrap
       flex-wrap: wrap
     &-faq
@@ -169,7 +207,21 @@
     .br
       display: none
 @media (max-width: 320px)
+  .price
+    &-card
+      min-height: auto
+  .steps
+    padding-bottom: 10px
+    &-item
+      flex-basis: 100%
+      &__img
+        margin-bottom: 10px
+  .banner
+    &-title
+      font-size: 26px
   .information
+    &::before
+      height: 50%
     &-faq
       text-align: center
       padding-right: 0

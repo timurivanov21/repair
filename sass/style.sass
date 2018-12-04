@@ -3,11 +3,15 @@
 @import 'interface'
 @import 'normalize'
 @import 'fonts'
+@import 'animation'
 
 @import 'header'
 @import 'main'
 @import 'feedback'
 @import 'portfolio'
+@import 'price'
+@import 'steps'
+@import 'banner'
 @import 'information'
 
 @import 'modal'
@@ -17,21 +21,56 @@
 body
   font-family: 'Museo Sans Light', sans-serif
   color: $text-color
-  overflow-x: hidden
 .container
   width: 1170px
   margin: 0 auto
 img 
   max-width: 100%
 .section
- &-title
-   +bold
-   line-height: 45px
-   font-size: 30px
-   &_center
-     text-align: center
+  &-title
+    color: $dark-color
+    +bold
+    line-height: 45px
+    font-size: 30px
+    margin-bottom: 45px
+    span
+      display: block
+    &_center
+      text-align: center
+  &-subtitle
+    color: $dark-color
+    font-size: 20px
+    text-align: center
+    margin-bottom: 50px
+    font-weight: 300
 .error
   border-color: red
   
+.fadeInUp
+  animation: fadeInUp 1s
+  &:nth-child(2)
+    animation-delay: 0.4s
+  &:nth-child(3)
+    animation-delay: 0.8s
+  &:nth-child(4)
+    animation-delay: 1.2s
+  &:nth-child(5)
+    animation-delay: 1.6s
+  &:nth-child(6)
+    animation-delay: 2s
+
+.animateText
+  animation: typing 5s steps(91, end), blink-caret .5s step-end 10 alternate
+
+.steps-item__visible
+  position: absolute
+  top: -15px
+  right: -16%
+  width: 72px
+  height: 25px
+  background: url('../img/steps/arrow-next.png') no-repeat center center
+  background-size: 100%
+  animation: arrowFade 1s ease-in-out 0.4s
+
 @import 'media'
 
