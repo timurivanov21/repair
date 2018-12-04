@@ -19,6 +19,12 @@
         right: 20px
         left: 50px
 @media (max-width: 992px)
+  .animateText
+    animation: none
+    white-space: normal
+  .steps-item__visible
+    animation: none
+    display: none
   .container
     width: 767px
   .main
@@ -88,6 +94,9 @@
     &::before
       display: none
   .steps
+    .section-title
+      span
+        display: none
     &-wrap
       flex-wrap: wrap
     &-item
@@ -95,15 +104,34 @@
       &::before
         display: none
   .information
+    padding-top: 28px
+    &::before
+      width: 100%
+      bottom: 0
+      left: 0
+      right: auto
+      top: auto
+      z-index: 1
+      height: 53%
+    &-wrap
+      flex-wrap: wrap
     &-faq
-      padding-bottom: 10px
-      &__questions
-        &-item
-          margin-bottom: 33px
+      text-align: center
+      flex-basis: 100%
+      z-index: 30
+      padding-right: 0
       &__title
-        text-align: center
+        max-width: none
+      &__questions
+        padding-left: 0
+        max-width: none
+        margin-left: 0
+        &-item
+          &::before
+            display: none
     &-feedback
-      padding-left: 30px
+      flex-basis: 100%
+      align-items: center
   .modal
     &__dialog
       width: 100%
@@ -163,31 +191,7 @@
   .information
     padding-top: 60px
     &::before
-      width: 100%
-      bottom: 0
-      left: 0
-      right: auto
-      top: auto
-      z-index: 1
-      height: 55%
-    &-wrap
-      flex-wrap: wrap
-    &-faq
-      text-align: center
-      flex-basis: 100%
-      z-index: 30
-      padding-right: 0
-      &__title
-        max-width: none
-      &__questions
-        padding-left: 0
-        max-width: none
-        margin-left: 0
-        &-item
-          &::before
-            display: none
-    &-feedback
-      flex-basis: 100%
+      height: 51%
   .modal
     &__dialog
       width: 100% 
@@ -221,7 +225,7 @@
       font-size: 26px
   .information
     &::before
-      height: 50%
+      height: 47%
     &-faq
       text-align: center
       padding-right: 0
