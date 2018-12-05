@@ -71,9 +71,9 @@
         <span class="form__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
 
         <!-- Форма номер 1 -->
-        <form action="#">
+        <form action="#" id="form1">
           <input type="text" class="input input-name form__input" name="user_name" placeholder="Ваше имя" required>
-          <input type="tel" class="input input-tel form__input" id="user_phone1" name="user_phone" placeholder="Ваш телефон: +7 (xxx)-xxx-xx-xx" required>
+          <input type="tel" class="input input-tel form__input" name="user_phone" placeholder="Ваш телефон: +7-xxx-xxx-xx-xx" required>
           <span id="valid"></span>
           <button type="submit" class="button form__button">Получить <span class="hidden-xs">бесплатный</span> дизайн-проект</button> 
         </form>
@@ -249,9 +249,9 @@
             <span class="form__subtitle">Для этого заполните форму ниже</span>
 
             <!-- Форма номер 2 -->
-            <form action="#">
+            <form action="#" id="form2">
               <input type="text" class="input input-name information-feedback__input" name="user_name" placeholder="Ваше имя" required>
-              <input type="tel" id="user_phone2" name="user_phone" class="input input-tel information-feedback__input" placeholder="Ваш телефон: +7 (xxx)-xxx-xx-xx" required>
+              <input type="tel" name="user_phone" class="input input-tel information-feedback__input" placeholder="Ваш телефон: +7-xxx-xxx-xx-xx" required>
               <button type="submit" class="button information-feedback__button" >Рассчитать стоимость</button> 
             </form>
             <span class="information-feedback__comment">Мы перезвоним Вам в течение 60 секунд</span>
@@ -345,9 +345,9 @@
             <span class="modal__form-subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
 
             <!-- Форма номер 3 -->
-            <form action="#">
+            <form action="#" id="form3">
               <input type="text" class="input modal__form-input" name="user_name" placeholder="Ваше имя" required>
-              <input type="text" class="input modal__form-input" name="user_phone" id="user_phone3" placeholder="Ваш телефон: +7 (xxx)-xxx-xx-xx" required>
+              <input type="text" class="input modal__form-input" name="user_phone" placeholder="Ваш телефон: +7-xxx-xxx-xx-xx" required>
               <button type="submit" class="button modal__form-button">Узнать стоимость</button>
             </form>
             <span class="modal__form-descr">
@@ -359,7 +359,6 @@
         </div>
     </div>
   </div>
-  <!-- pattern="[A-Za-zА-Яа-яЁё]{3,}" -->
 
   <!-- Модальное окно благодарности -->
   <div class="g-hidden" style="display: none;">

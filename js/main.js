@@ -34,15 +34,14 @@ $(document).ready(function() {
     ]
   });
 
-  $('#user_phone1').mask('+7 (999)-999-9999');
-  $('#user_phone2').mask('+7 (999)-999-9999');
-  $('#user_phone3').mask('+7 (999)-999-9999');
-
   $.validator.addMethod("isName", function(value, element) {
     return this.optional(element) || value == value.match(/[A-Za-zА-Яа-яЁё]{3,}/);
   });
+  $.validator.addMethod("isPhone", function(value, element) {
+    return this.optional(element) || value == value.match(/^\+\d{1}-\d{3}-\d{3}-\d{2}-\d{2}$/);
+  });
 
-  $("form").validate({
+  $("#form1").validate({
     rules: {
       user_name: {
         required: true,
@@ -50,7 +49,8 @@ $(document).ready(function() {
         isName: true
       },
       user_phone: {
-        required: true
+        required: true,
+        isPhone: true
       }
     },
     messages: {
@@ -72,7 +72,73 @@ $(document).ready(function() {
         return false;
       });
     }
-  });   
+  }); 
+  
+  $("#form2").validate({
+    rules: {
+      user_name: {
+        required: true,
+        minlength: 2,
+        isName: true
+      },
+      user_phone: {
+        required: true,
+        isPhone: true
+      }
+    },
+    messages: {
+      user_name: "",
+      user_phone: ""
+    },
+    submitHandler: function() {
+      $('form').submit(function(event) {
+        event.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(this).serialize()
+        }).done(function() {
+          $('#thanks-modal').arcticmodal();
+          $(this).find("input").val("");
+          $("form").trigger("reset");
+        });
+        return false;
+      });
+    }
+  });
+
+  $("#form3").validate({
+    rules: {
+      user_name: {
+        required: true,
+        minlength: 2,
+        isName: true
+      },
+      user_phone: {
+        required: true,
+        isPhone: true
+      }
+    },
+    messages: {
+      user_name: "",
+      user_phone: ""
+    },
+    submitHandler: function() {
+      $('form').submit(function(event) {
+        event.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(this).serialize()
+        }).done(function() {
+          $('#thanks-modal').arcticmodal();
+          $(this).find("input").val("");
+          $("form").trigger("reset");
+        });
+        return false;
+      });
+    }
+  });
 
   $('.arcticmodal-close').on('click', function(){
     $.arcticmodal('close');
@@ -137,7 +203,7 @@ $(document).ready(function() {
   function init(){ 
       var myMap = new ymaps.Map("map", {
           center: [55.76, 49.106324],
-          zoom: 7
+          zoom: 10
       }); 
 
       var myPlacemark = new ymaps.Placemark([55.798551, 49.106324], {
