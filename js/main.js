@@ -211,11 +211,15 @@ $(document).ready(function() {
         balloonContent: 'Это красивая метка'
       }, {
         iconLayout: 'default#image',
-        iconImageHref: '../img/pin.png',
+        iconImageHref: 'img/pin.png',
         iconImageSize: [32, 32]
       });
       myMap.geoObjects.add(myPlacemark);
   }
 
+  $('#button-callback').on('click', function(){
+    yaCounter51430780.reachGoal('btn');
+    return true;
+  });
 
 });
